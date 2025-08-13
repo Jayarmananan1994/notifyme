@@ -1,0 +1,41 @@
+{
+  "name": "notify-me",
+  "version": "1.0.0",
+  "description": "Intelligent email monitoring system with WhatsApp notifications",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean",
+    "type-check": "turbo run type-check"
+  },
+  "devDependencies": {
+    "@kayvan/markdown-tree-parser": "^1.6.0",
+    "turbo": "^1.10.7"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/notify-me.git"
+  },
+  "keywords": [
+    "email-monitoring",
+    "whatsapp",
+    "notifications",
+    "gmail-api",
+    "react",
+    "nodejs"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
