@@ -64,7 +64,6 @@ const HealthCheck = () => {
     );
   }
 
-  const statusColor = health?.status === 'ok' ? 'green' : 'red';
   const bgColor = health?.status === 'ok' ? 'bg-green-100' : 'bg-red-100';
   const borderColor = health?.status === 'ok' ? 'border-green-300' : 'border-red-300';
   const textColor = health?.status === 'ok' ? 'text-green-800' : 'text-red-800';
