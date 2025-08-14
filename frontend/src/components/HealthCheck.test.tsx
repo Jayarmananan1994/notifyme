@@ -30,6 +30,8 @@ describe('HealthCheck', () => {
       expect(screen.getByText(/Health check failed:/)).toBeInTheDocument()
       expect(screen.getByText(/Network error/)).toBeInTheDocument()
     }, { timeout: 3000 })
+    
+    expect(mockFetch).toHaveBeenCalledWith('http://localhost:3001/health')
   })
 
   test('renders healthy status when API returns ok', async () => {
@@ -52,6 +54,8 @@ describe('HealthCheck', () => {
       expect(screen.getByText('Environment: production')).toBeInTheDocument()
       expect(screen.getByText('Uptime: 60 minutes')).toBeInTheDocument()
     }, { timeout: 3000 })
+    
+    expect(mockFetch).toHaveBeenCalledWith('http://localhost:3001/health')
   })
 
   test('renders error status when API returns error', async () => {
@@ -72,5 +76,7 @@ describe('HealthCheck', () => {
     await waitFor(() => {
       expect(screen.getByText('System Status: ERROR')).toBeInTheDocument()
     }, { timeout: 3000 })
+    
+    expect(mockFetch).toHaveBeenCalledWith('http://localhost:3001/health')
   })
 })

@@ -15,7 +15,8 @@ const HealthCheck = () => {
   const fetchHealth = async () => {
     try {
       setLoading(true);
-      const response = await fetch('/api/health');
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001';
+      const response = await fetch(`${backendUrl}/health`);
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}`);
       }
